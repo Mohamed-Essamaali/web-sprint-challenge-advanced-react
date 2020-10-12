@@ -16,7 +16,7 @@ const initialValue = {
 
 const CheckoutForm = (props) => {
 
-  const [values,showSuccessMessage,handleChanges,handleSubmit] = useForm(Date.now(),initialValue);
+  const [values,showSuccessMessage,handleChanges,handleSubmit] = useForm(props,initialValue);
 
 
 
@@ -27,6 +27,7 @@ const CheckoutForm = (props) => {
         <label>
           First Name:
           <input
+            placeholder='simo'
             name="firstName"
             value={values.firstName}
             onChange={handleChanges}
@@ -35,6 +36,7 @@ const CheckoutForm = (props) => {
         <label>
           Last Name:
           <input
+          placeholder='jimy'
             name="lastName"
             value={values.lastName}
             onChange={handleChanges}
@@ -43,6 +45,7 @@ const CheckoutForm = (props) => {
         <label>
           Address:
           <input
+          placeholder='123 2nd ave'
             name="address"
             value={values.address}
             onChange={handleChanges}
@@ -50,17 +53,17 @@ const CheckoutForm = (props) => {
         </label>
         <label>
           City:
-          <input name="city" value={values.city} onChange={handleChanges} />
+          <input name="city" value={values.city} onChange={handleChanges}   placeholder='New york city'/>
         </label>
         <label>
           State:
-          <input name="state" value={values.state} onChange={handleChanges} />
+          <input name="state" value={values.state} onChange={handleChanges}   placeholder='New york'/>
         </label>
         <label>
           Zip:
-          <input name="zip" value={values.zip} onChange={handleChanges} />
+          <input name="zip" value={values.zip} onChange={handleChanges}   placeholder ='101254'/>
         </label>
-        <button>Checkout</button>
+        <button name='submit'>Checkout</button>
       </form>
 
       {showSuccessMessage && (

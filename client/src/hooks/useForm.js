@@ -19,6 +19,6 @@ export function useForm(key,initialValues){
       };
 
 
-    return [values,handleChanges,showSuccessMessage,handleSubmit]
+    return [values,showSuccessMessage,handleChanges,handleSubmit]
 
 }
